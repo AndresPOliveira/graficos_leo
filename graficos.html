@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>graficos leo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div style="width: 600px;">
+        <canvas id="myChart"></canvas>
+    </div>
+    <div style="width: 600px;">
+        <canvas id="myChart2"></canvas>
+    </div>
+    <div style="width: 600px;">
+        <canvas id="myChart3"></canvas>
+    </div>
+    <div style="width: 600px;">
+        <canvas id="myChart4"></canvas>
+    </div>
+    <div style="width: 600px;">
+        <canvas id="myChart5"></canvas>
+    </div>
+</body>
+<script>
+    const labels = [
+        '10:00',
+        '10:45',
+        '11:30',
+        '12:15',
+        '13:00',
+        '13:45',
+        '14:30',
+        '15:15',
+        '16:00',
+        '16:45',
+        '17:30',
+        '18:15'
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Area A',
+            backgroundColor: '#00FF66',
+            borderColor: '#00FF66',
+            data: [53, 50, 55, 52, 56, 57, 52,58,60,62,64,60],
+        }
+    ]
+    };
+    const data2 = {
+        labels: labels,
+        datasets:[{
+            label: 'Area B',
+            backgroundColor: '#084B99',
+            borderColor: '#084B99',
+            data: [45, 30, 52,55, 52, 54, 50, 53, 55,52,53,56],
+        }
+    ]
+    };
+    const data3 = {
+        labels: labels,
+        datasets:[       {
+            label: 'Area C',
+            backgroundColor: '#40C89F',
+            borderColor: '#40C89F',
+            data: [53,53,54,55,55,50,54,53, 55,52,53,50],
+        } 
+    ]
+    };
+    const data4 = {
+        labels: labels,
+        datasets:[       
+            {
+            label: 'Area D',
+            backgroundColor: '#B5D0E0',
+            borderColor: '#B5D0E0',
+            data: [65,64,65,62,55,63,55,53, 55,52,53,51],
+        }
+    ]
+    };
+    const data5 = {
+        labels: labels,
+        datasets:[       
+        {
+            label: 'Area E',
+            backgroundColor: '#345E77',
+            borderColor: '#345E77',
+            data: [52, 45,45, 40, 50, 45,53, 55,52,53,50],
+        }
+    ]
+    };
+
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {}
+    };
+    const config2 = {
+        type: 'line',
+        data: data2,
+        options: {}
+    };
+    const config3 = {
+        type: 'line',
+        data: data3,
+        options: {}
+    };
+    const config4 = {
+        type: 'line',
+        data: data4,
+        options: {}
+    };
+    const config5 = {
+        type: 'line',
+        data: data5,
+        options: {}
+    };
+</script>
+<script>
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+    );
+    const myChart3 = new Chart(
+        document.getElementById('myChart3'),
+        config3
+    );
+    const myChart4 = new Chart(
+        document.getElementById('myChart4'),
+        config4
+    );
+    const myChart5 = new Chart(
+        document.getElementById('myChart5'),
+        config5
+    );
+</script>
+
+</html>
