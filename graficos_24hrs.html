@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>graficos 24 leo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div style="width: 600px;">
+        <canvas id="myChart"></canvas>
+    </div>
+</body>
+<script>
+    const labels = [
+        '22/10/2022',
+        '23/10/2022'
+
+    ]
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Area A',
+            backgroundColor: '#00FF66',
+            borderColor: '#00FF66',
+            data: [53, 50],
+        },
+        {
+            label: 'Area B',
+            backgroundColor: '#084B99',
+            borderColor: '#084B99',
+            data: [48, 60],
+        },
+        {
+            label: 'Area C',
+            backgroundColor: '#40C89F',
+            borderColor: '#40C89F',
+            data: [47, 50],
+        },
+        {
+            label: 'Area D',
+            backgroundColor: '#B5D0E0',
+            borderColor: '#B5D0E0',
+            data: [67, 60],
+        },
+        {
+            label: 'Area E',
+            backgroundColor: '#345E77',
+            borderColor: '#345E77',
+            data: [55, 50],
+        }
+
+    ]
+    };
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {}
+    };
+</script>
+<script>
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+</script>
+</html>
